@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"  
+  android:layout_height="wrap_content" 
+  android:orientation="vertical" 
+  android:layout_width="fill_parent">
+  <TextView android:text="Admin Login"
+            android:paddingTop="20dip" 
+            android:paddingBottom="20dip"
+            android:id="@+id/login_TextView" 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" 
+            android:gravity="center"
+            android:soundEffectsEnabled="true" android:password="false"
+            android:textStyle="bold">
+   </TextView>
+   
+   <LinearLayout
+       android:id="@+id/login_layout_account"
+       android:gravity="center"
+       android:paddingBottom="20dip"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content">      
+     <TextView
+       android:id="@+id/login_txtAccount"
+       android:text="Account"
+       android:minWidth="80dip"
+       android:gravity="center"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content">   
+     </TextView>
+     <EditText         
+       android:id="@+id/login_edtAccount"       
+       android:minWidth="120dip"      
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+     >
+     </EditText>
+   </LinearLayout>
+   
+    <LinearLayout
+       android:id="@+id/login_layout_psw"
+       android:gravity="center"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content">      
+     <TextView
+       android:id="@+id/login_txtPsw"
+       android:minWidth="80dip"
+       android:gravity="center"
+       android:text="password"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content">   
+     </TextView>
+     <EditText         
+       android:id="@+id/login_edtPassword"       
+       android:minWidth="120dip"      
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+     >
+     </EditText>
+   </LinearLayout>
+   
+   <LinearLayout
+      android:id="@+id/login_layout_okorregister"
+      android:gravity="right"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content">
+      
+      <Button android:id="@+id/login_btnLogin"
+        android:minWidth="70dip"
+        android:text="登陆"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+      >
+      </Button>
+      
+      <Button android:id="@+id/login_btnRegister"
+        android:minWidth="70dip"
+        android:text="注册"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+      >
+      </Button>
+   </LinearLayout>
+</LinearLayout>
