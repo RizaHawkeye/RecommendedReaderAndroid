@@ -1,10 +1,18 @@
-package com.example.recommendedreaderclient;
+package com.example.recommendedreaderclient.Server;
 
 public class GetInfoAdapter {
 	GetInfoBySocket inter  = new GetInfoBySocket();
+
+	private String id,author,title,href,timestampUsec;
+	private String content;
+
 	public String getAuthor(){
 		return inter.getAuthor();
 	}
+	public String setAuthor(String author){
+		author = 
+	}
+	
 	public String getId(){
 		return inter.getId();
 	}
@@ -20,4 +28,6 @@ public class GetInfoAdapter {
 	public String getTimestampUsec(){
 		return inter.getTimestampUsec();
 	}
+	public String getInfo()
 }
+

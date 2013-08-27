@@ -1,4 +1,4 @@
-package com.example.recommendedreaderclient;
+package com.example.recommendedreaderclient.Server;
 
 public interface GetInfoInter {
 	String getAuthor();
@@ -7,5 +7,5 @@ public interface GetInfoInter {
 	String getHref();
 	String getContent();
 	String getTimestampUsec();
-	String getAllInfo();
+	String getInfo();
 }
