@@ -8,6 +8,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.widget.*;
 
+import com.example.recommendedreaderclient.Server.*;
+
 public class LoginActivity extends Activity{
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,8 +24,9 @@ public class LoginActivity extends Activity{
         
         btnLogin.setOnClickListener(btnLoginClickListener);
         btnRegister.setOnClickListener(btnRegisterClickListener);
-    }
 	
+		
+	}
 	class BtnLogin_OnClickListener implements OnClickListener{
 		@Override
 		public void onClick(View v){
@@ -33,6 +36,16 @@ public class LoginActivity extends Activity{
 			String account = tvAccount.getText().toString();
 			String password = tvPassword.getText().toString();
 			//TODO: login the account, if correct then go to the MainActivity
+			Client client = new SocketClient();
+			String info = client.register("REG", account, password);
+			if(info == null){
+				Account.storeAccountInDB(account, password);
+				String msg = "×¢²á³É¹¦";
+				Toast.makeText(LoginActivity.this, msg, Toast.LENGTH_LONG).show();
+			}
+			else{
+				Toast.makeText(LoginActivity.this, info, Toast.LENGTH_LONG).show();
+			}
 		}
 	}
 	class BtnRegister_OnClickListener implements OnClickListener{
@@ -42,5 +55,4 @@ public class LoginActivity extends Activity{
 			startActivity(intent);
 		}
 	}
-
 }
